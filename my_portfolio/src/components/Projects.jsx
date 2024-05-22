@@ -34,7 +34,7 @@ const Projects = () => {
           <Card
             key={index}
             rounded="0"
-            w="30%"
+            w={{ base: "100%", md: "30%" }}
             h={{ sm: "200", md: "200", lg: "300" }}
           >
             <Img src={item.img} alt={item.name} h="100%" w="100%" />
