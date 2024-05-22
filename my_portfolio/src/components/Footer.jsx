@@ -10,7 +10,7 @@ const Footer = () => {
         justify="center"
         gap="10"
       >
-        <Text w="300">
+        <Text w="300" align="center">
           <Link href="mailto:koredethompson456@gmail.com">
             koredethompson456@gmail.com
           </Link>
