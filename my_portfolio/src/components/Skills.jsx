@@ -19,6 +19,7 @@ import python from "../assets/images/python.png";
 import react from "../assets/images/react.png";
 import sql from "../assets/images/sql.png";
 import ubuntu from "../assets/images/ubuntu-logo.png";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   const skills = [
@@ -64,9 +65,13 @@ const Skills = () => {
     },
   ];
 
+  const MotionBox = motion(Box);
+
   return (
     <Box id="skills" my="50px">
-      <Heading w="100%" align="center"mb="5">My Skills</Heading>
+      <Heading w="100%" align="center" mb="5">
+        My Skills
+      </Heading>
       <Flex
         direction="row"
         align="center"
@@ -76,14 +81,31 @@ const Skills = () => {
         justify="center"
       >
         {skills.map((item, index) => (
-          <Card key={index} w="200px" h="200px" p="5" overflow="hidden" rounded="20" bg="rgba(0 ,0, 0, 0.3)"
->
-            <VStack>
-              <Box w="100%" h="150px">
-                <Image src={item.path} alt={item.name} w="100%" h="100%" />
-              </Box>
-              <Text position="absolute" color="#fff" bottom="2" weight="bold">{item.name}</Text>
-            </VStack>
+          <Card
+            key={index}
+            w="200px"
+            h="200px"
+            p="5"
+            overflow="hidden"
+            rounded="20"
+            bg="rgba(0 ,0, 0, 0.3)"
+          >
+            {" "}
+            <MotionBox
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+            >
+              <VStack>
+                <Box w="100%" h="150px">
+                  <Image src={item.path} alt={item.name} w="100%" h="100%" />
+                </Box>
+                <Text position="absolute" color="#fff" bottom="2" weight="bold">
+                  {item.name}
+                </Text>
+              </VStack>
+            </MotionBox>
           </Card>
         ))}
       </Flex>

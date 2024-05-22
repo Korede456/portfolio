@@ -1,6 +1,8 @@
 import { Box, Card, Flex, Heading, Img } from "@chakra-ui/react";
 import trivia from "../assets/images/intel-trivia.png";
+import { motion } from "framer-motion";
 
+const MotionBox = motion(Box);
 const Projects = () => {
   const projects = [
     {
@@ -38,10 +40,26 @@ const Projects = () => {
             w={{ base: "100%", md: "30%" }}
             h={{ base: "200", md: "200", lg: "300" }}
           >
-            <Img src={item.img} alt={item.name} h="100%" w="100%" />
-            <Heading position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" color="grey" align="center">
-              {item.name}
-            </Heading>
+            <MotionBox
+              w="100%"
+              h="100%"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Img src={item.img} alt={item.name} h="100%" w="100%" />
+              <Heading
+                position="absolute"
+                top="50%"
+                left="50%"
+                transform="translate(-50%, -50%)"
+                color="grey"
+                align="center"
+              >
+                {item.name}
+              </Heading>
+            </MotionBox>
           </Card>
         ))}
       </Flex>
