@@ -4,16 +4,21 @@ const Footer = () => {
   return (
     <Box>
       <Heading>Contact Me</Heading>
-      <Flex w={{base:"100%", md:"60%"}} align="center" justify="center" gap="10">
+      <Flex
+        w={{ base: "100%", md: "60%" }}
+        align="center"
+        justify="center"
+        gap="10"
+      >
         <Text w="300">
           <Link href="mailto:koredethompson456@gmail.com">
             koredethompson456@gmail.com
           </Link>
         </Text>
-        <Text>
+        <Text w="300">
           <Link href="tel:+2347033300647">+2347033300647</Link>
         </Text>
-        <Text>Kubwa,  Abuja,  Nigeria</Text>
+        <Text w="300">Kubwa, Abuja, Nigeria</Text>
       </Flex>
     </Box>
   );
