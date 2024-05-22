@@ -36,7 +36,7 @@ const Testimonial = () => {
   };
 
   return (
-    <Box w="100%" mx="auto" p={4}>
+    <Box w="100%" mx="auto" p={4} id="testimonia">
       <Heading>Testimonial</Heading>
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (

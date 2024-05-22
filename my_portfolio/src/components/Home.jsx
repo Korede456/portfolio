@@ -4,35 +4,41 @@ import { FaWhatsapp, FaGitAlt } from "react-icons/fa";
 
 const Home = () => {
   return (
-    <Box w="100%" h="400px">
+    <Box id="home" w="100%" h={{ sm: "auto", md: "400px" }} mt="20">
       <Box>
-        <Text size="20px">
+        <Text fontSize={{ base: "1.5rem", md: "3rem" }}>
           I&apos;m{" "}
           {
             <Text color="gold" display="inline">
               Korede Thompson
             </Text>
           }
-          <br />
-          fullStack softWare developer
+          <br />a fullStack softWare engineer
         </Text>
-        <Button mt="20">Contact me</Button>
+        <Button mt="20">
+          <Link href="#contact">Contact me</Link>
+        </Button>
       </Box>
-      <VStack position="fixed" right="10" top="200" z-index="1">
+      <VStack
+        position="fixed"
+        right={{ base: "2px", md: "10" }}
+        top="200"
+        z-index="1"
+      >
         <Box height="100px" width="1px" bg="gold" />
         <Button bg="none" color="grey">
-          <Link href="https://x.com/boi_thompson456">
+          <Link href="https://x.com/boi_thompson456" isExternal>
             <FaXTwitter />
           </Link>
         </Button>
         <Button bg="none" color="grey">
-          <Link href="https://wa.ma/+2347033300647">
+          <Link href="https://wa.ma/+2347033300647" isExternal>
             <FaWhatsapp />
           </Link>
         </Button>
 
         <Button bg="none" color="grey">
-          <Link href="https://github.com/korede456">
+          <Link href="https://github.com/korede456" isExternal>
             <FaGitAlt />
           </Link>
         </Button>

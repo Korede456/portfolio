@@ -8,8 +8,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <ChakraProvider>
       <Box
         w="100%"
-        px={{ sm: "2%", md: "5%", lg: "10%" }}
-        pb="20"
+        px={{ base: "2%", md: "5%", lg: "10%" }}
+        py="20"
         m="0"
         bg="#181A2A"
         color="#fff"

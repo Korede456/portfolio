@@ -65,7 +65,7 @@ const Skills = () => {
   ];
 
   return (
-    <Box my="50px">
+    <Box id="skills" my="50px">
       <Heading w="100%" align="center"mb="5">My Skills</Heading>
       <Flex
         direction="row"

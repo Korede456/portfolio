@@ -13,6 +13,8 @@ import {
   Spacer,
   Box,
   Link,
+  DrawerBody,
+  VStack,
 } from "@chakra-ui/react";
 import { IoMenu } from "react-icons/io5";
 
@@ -21,10 +23,28 @@ const Header = () => {
   const btnRef = React.useRef();
 
   return (
-    <Flex align="center" direction="row" w="100%" h="50px" my="10">
+    <Flex
+      align="center"
+      direction="row"
+      w="100%"
+      h="100px"
+      top="0"
+      left="0"
+      
+      position="fixed"
+      bg="#181A2A"
+      zIndex={10}
+      px={{ base: "2%", md: "5%", lg: "10%" }}
+    >
       <Heading>Kored Thompson</Heading>
       <Spacer />
-      <Flex w="40%" display={{ base: "none", sm: "none", md: "flex", lg: "flex" }} direction="row" align="center" justify="space-between">
+      <Flex
+        w="40%"
+        display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}
+        direction="row"
+        align="center"
+        justify="space-between"
+      >
         <Link href="#home">Home</Link>
         <Link href="#about">About</Link>
         <Link href="#skills">My Skills</Link>
@@ -44,12 +64,22 @@ const Header = () => {
           <DrawerContent>
             <DrawerCloseButton />
             <DrawerHeader>Create your account</DrawerHeader>
-            <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button colorScheme="blue">Save</Button>
-            </DrawerFooter>
+            <DrawerBody>
+              <VStack>
+                <Link href="#home" onClick={onClose}>
+                  Home
+                </Link>
+                <Link href="#about" onClick={onClose}>
+                  About
+                </Link>
+                <Link href="#skills" onClick={onClose}>
+                  My Skills
+                </Link>
+                <Link href="#projects" onClick={onClose}>
+                  Projects
+                </Link>
+              </VStack>
+            </DrawerBody>
           </DrawerContent>
         </Drawer>
       </Box>

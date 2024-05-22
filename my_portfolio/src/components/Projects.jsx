@@ -17,7 +17,7 @@ const Projects = () => {
     },
   ];
   return (
-    <Box my="50px" w="100%">
+    <Box id="projects" my="50px" w="100%">
       <Heading w="100%" align="center" mb="5">
         My Projects
       </Heading>
@@ -32,13 +32,14 @@ const Projects = () => {
       >
         {projects.map((item, index) => (
           <Card
+            position="relative"
             key={index}
             rounded="0"
             w={{ base: "100%", md: "30%" }}
-            h={{ sm: "200", md: "200", lg: "300" }}
+            h={{ base: "200", md: "200", lg: "300" }}
           >
             <Img src={item.img} alt={item.name} h="100%" w="100%" />
-            <Heading position="absolute" top="40%" left="5" color="#fff">
+            <Heading position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" color="grey" align="center">
               {item.name}
             </Heading>
           </Card>
