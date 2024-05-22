@@ -21,7 +21,7 @@ const Header = () => {
   const btnRef = React.useRef();
 
   return (
-    <Flex align="center" direction="row" w="100%" h="50px">
+    <Flex align="center" direction="row" w="100%" h="50px" my="10">
       <Heading>Kored Thompson</Heading>
       <Spacer />
       <Flex w="40%" display={{ base: "none", sm: "none", md: "flex", lg: "flex" }} direction="row" align="center" justify="space-between">
