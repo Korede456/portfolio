@@ -1,4 +1,6 @@
 import { Box, Button, Flex, Heading, Link } from "@chakra-ui/react";
+import { IoMail, IoLocation } from "react-icons/io5";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -19,15 +21,20 @@ const Footer = () => {
         gap="10"
         wrap="wrap"
       >
-        <Button w={{base:"100%",md:"40%"}}>
-          <Link href="mailto:koredethompson456@gmail.com">
+        <Button w={{ base: "100%", md: "42%" }}>
+          <IoMail />
+          <Link href="mailto:koredethompson456@gmail.com" ml="5">
             koredethompson456@gmail.com
           </Link>
         </Button>
-        <Button w={{base:"100%",md:"40%"}}>
-          <Link href="tel:+2347033300647">+2347033300647</Link>
+        <Button w={{ base: "100%", md: "42%" }}>
+          <FaPhoneAlt />
+          <Link href="tel:+2347033300647" ml="5">+2347033300647</Link>
         </Button>
-        <Button w={{base:"100%",md:"40%"}}>Kubwa, Abuja, Nigeria</Button>
+        <Button w={{ base: "100%", md: "42%" }}>
+          <IoLocation />
+          Kubwa, Abuja, Nigeria
+        </Button>
       </Flex>
     </Box>
   );

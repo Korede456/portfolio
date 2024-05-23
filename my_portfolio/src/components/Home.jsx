@@ -6,7 +6,15 @@ import { motion } from "framer-motion";
 const MotionBox = motion(Box);
 const Home = () => {
   return (
-    <Box id="home" w="100%" h={{ sm: "auto", md: "400px" }} mt="20">
+    <Box
+      id="home"
+      w="100%"
+      h={{ sm: "auto", md: "400px" }}
+      mt="20"
+      backgroundImage="url('../assets/images/avatar.png')"
+      backgroundPosition="right"
+      backgroundRepeat="no-repeat"
+    >
       <MotionBox
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +40,7 @@ const Home = () => {
         position="fixed"
         right={{ base: "2px", md: "10" }}
         top="200"
-        z-index="1"
+        zIndex="20"
       >
         <Box height="100px" width="1px" bg="gold" />
         <Button bg="none" color="grey">
